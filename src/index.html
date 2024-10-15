@@ -13,16 +13,53 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div
+      class="container-fluid text-center d-flex flex-column align-items-center  justify-content-center my-3"
+    >
+      <div
+        class="carta d-flex justify-content-between flex-column shadow-lg p-3 mb-5 bg-white rounded"
+      >
+        <span class="palos text-start color item-1">♣</span>
+
+        <span id="numero" class="color centro-carta">7</span>
+
+        <span class=" palos text-start inversa  color item-2">♣</span>
+      </div>
+
+      <div class="w-50 d-flex flex-column text-light">
+        <div>
+          <label class="m-2 "
+            >Ancho (200-500px):
+            <input
+              id="anchoInput"
+              type="number"
+              min="200"
+              max="500"
+              value="300"
+            />px
+          </label>
+          <br />
+          <label class="m-2 "
+            >Alto (400-600px):
+            <input
+              id="altoInput"
+              type="text"
+              min="400"
+              max="600"
+              value="400"
+            />px
+          </label>
+        </div>
+        <div>
+          <button id="btnDim" class="btn btn-primary  m-2">
+            Cambiar Dimenciones
+          </button>
+          <button class="btn btn-danger m-4">Cambiar Carta</button>
+        </div>
+
+        <button id="reset" class="btn btn-warning w-25 my-0 mx-auto">
+          Reset Estilo
+        </button>
       </div>
     </div>
   </body>
