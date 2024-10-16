@@ -3,7 +3,17 @@ import "bootstrap";
 import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+
 window.onload = test();
+
+setInterval(function() {
+  Contenedora();
+}, 10000);
+
+//refresca la pagina
+document.getElementById("reset").addEventListener("click", () => {
+  location.reload();
+});
 
 function test() {
   //write your code here
@@ -17,13 +27,8 @@ function test() {
   });
 }
 
-setInterval(function() {
-  Contenedora();
-}, 10000);
 function Contenedora() {
-  //variables
   let obj = {};
-  let colorVar = document.getElementsByClassName("color");
   const centro = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
   const card = [
     { nombre: "spade", color: "black", simbolo: "♠" },
@@ -31,22 +36,15 @@ function Contenedora() {
     { nombre: "heart", color: "red", simbolo: "♥" },
     { nombre: "diamond", color: "red", simbolo: "♦" }
   ];
-  //recorrido por el arr de objetos
-  obj = card[Math.floor(Math.random() * card.length)];
 
+  obj = card[Math.floor(Math.random() * card.length)];
   //formar un nuevo arr con el simbolo agregado
   centro.push(obj.simbolo);
 
-  //funcion de la carta
   carta(centro);
-  //cambia los iconos de la carta
   cambiarIco(obj);
   cambiarColor(obj);
 }
-//refresca la pagina
-document.getElementById("reset").addEventListener("click", () => {
-  location.reload();
-});
 
 function carta(arr) {
   //elemento que hira en el centro de la carta
