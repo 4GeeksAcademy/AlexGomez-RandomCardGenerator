@@ -47,7 +47,6 @@ function Contenedora() {
 }
 
 function carta(arr) {
-  //elemento que hira en el centro de la carta
   let aux = arr[Math.floor(Math.random() * arr.length)];
   document.getElementById("numero").textContent = aux;
 }
